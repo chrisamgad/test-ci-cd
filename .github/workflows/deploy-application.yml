@@ -1,0 +1,19 @@
+name: Deploy Application
+
+on:
+
+  push:
+    branches:
+      - master
+
+jobs:
+  create-deployment-artifacts:
+    name: Create Deployment artifacts
+    runners: ubuntu-latest
+    steps:
+      - uses: _actions/checkout@v2
+
+      - name: Complile CSS and Javascript
+        run :
+        npm install
+        npm run prod
