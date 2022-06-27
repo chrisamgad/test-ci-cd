@@ -15,5 +15,5 @@ jobs:
 
       - name: Complile CSS and Javascript
         run :
-        npm install
-        npm run prod
+          npm install
+          npm run prod
